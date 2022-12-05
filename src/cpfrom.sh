@@ -6,7 +6,7 @@
 # prints files
 # `*` is not a required parameter for `$1`
 # directory path (`./`, `/`, `./folder`, `/folder`, ect) will list all recursive dirs and subdirs in it, `*`` or `**` is not needed
-find $1 -type f -exec bash -c "echo {} | sed 's/something/newsomethingfillinlater/g" \;
+find $1 -type f -exec bash -c "echo {} | sed 's/$1/newsomethingfillinlater/g" \;
 # `maxdepth` option is made for paths, not `*`s
 # `*` will only list one directory, even with `maxdepth` option
 # `**` is not supported and is the same as `*` `*`
